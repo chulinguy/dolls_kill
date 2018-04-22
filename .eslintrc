@@ -16,6 +16,7 @@
     "no-trailing-spaces": [1],
     "no-undef": [1],
     "no-unused-vars": [1],
+    "no-console": 1,
     "prefer-destructuring": ["error", {
       "array": true,
       "object": true
