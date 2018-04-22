@@ -9,7 +9,7 @@ class Form extends Component {
       results: [],
     };
     this.handleProdIdChange = this.handleProdIdChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleProdIdChange(event) {
@@ -17,11 +17,9 @@ class Form extends Component {
   }
 
   handleSubmit(event) {
-    retrieveData().then(data => {
-      console.log(data);
-      this.setState({ results: data });
-    });
     event.preventDefault();
+    const { prod_id } = this.state;
+    retrieveData(prod_id, this);
   }
 
   componentDidUpdate() {
@@ -31,7 +29,7 @@ class Form extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
+        <label htmlFor="product_id">
           Product IDs:
           <input type="text" value={this.state.prod_id} onChange={this.handleProdIdChange} />
         </label>

@@ -10,6 +10,7 @@
     "comma-dangle": 0,
     "dot-notation": [2, {"allowKeywords": true}],
     "eol-last": [1],
+    "import/prefer-default-export": 0,
     "jsx-quotes": 1,
     "linebreak-style": 0,
     "max-len": [0, 80, 4],
