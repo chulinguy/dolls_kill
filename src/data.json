@@ -1,0 +1,82 @@
+{
+  "141975": [
+    {
+      "amlabel_image": "",
+      "amlabel_width": "",
+      "amlabel_height": "",
+      "simple_id": "141989",
+      "color_id": "3564",
+      "color_text": "BLUE",
+      "size_id": "1857",
+      "size_text": "ONE SIZE",
+      "quantity": 0,
+      "display_brand": "3 AM Imports"
+    }
+  ],
+  "142593": {
+    "1": {
+      "amlabel_image": "",
+      "amlabel_width": "",
+      "amlabel_height": "",
+      "simple_id": "142605",
+      "color_id": "3564",
+      "color_text": "BLUE",
+      "size_id": "1857",
+      "size_text": "ONE SIZE",
+      "quantity": 0,
+      "display_brand": "Leg Avenue"
+    }
+  },
+  "143249": {
+    "3": {
+      "amlabel_image": "",
+      "amlabel_width": "",
+      "amlabel_height": "",
+      "simple_id": "143257",
+      "color_id": "3563",
+      "color_text": "BLUE",
+      "size_id": "2898",
+      "size_text": "Small",
+      "quantity": 0,
+      "display_brand": "Leg Avenue"
+    },
+    "4": {
+      "amlabel_image": "",
+      "amlabel_width": "",
+      "amlabel_height": "",
+      "simple_id": "143258",
+      "color_id": "3563",
+      "color_text": "BLUE",
+      "size_id": "2901",
+      "size_text": "Medium",
+      "quantity": 0,
+      "display_brand": "Leg Avenue"
+    },
+    "5": {
+      "amlabel_image": "",
+      "amlabel_width": "",
+      "amlabel_height": "",
+      "simple_id": "143259",
+      "color_id": "3563",
+      "color_text": "BLUE",
+      "size_id": "2904",
+      "size_text": "Large",
+      "quantity": 0,
+      "display_brand": "Leg Avenue"
+    }
+  },
+  "150605": {
+    "2": {
+      "amlabel_image": "",
+      "amlabel_width": "",
+      "amlabel_height": "",
+      "simple_id": "150619",
+      "color_id": "3563",
+      "color_text": "BLUE",
+      "size_id": "1857",
+      "size_text": "ONE SIZE",
+      "quantity": 0,
+      "display_brand": "In Your Dreams"
+    }
+  }
+}

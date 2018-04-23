@@ -7,6 +7,7 @@
   },
   "rules": {
     "arrow-parens":[1,"as-needed"],
+    "camelcase": 1,
     "comma-dangle": 0,
     "dot-notation": [2, {"allowKeywords": true}],
     "eol-last": [1],
