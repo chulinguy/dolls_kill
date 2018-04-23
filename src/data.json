@@ -23,7 +23,7 @@
       "color_text": "BLUE",
       "size_id": "1857",
       "size_text": "ONE SIZE",
-      "quantity": 0,
+      "quantity": 7,
       "display_brand": "Leg Avenue"
     }
   },
@@ -49,7 +49,7 @@
       "color_text": "BLUE",
       "size_id": "2901",
       "size_text": "Medium",
-      "quantity": 0,
+      "quantity": 2,
       "display_brand": "Leg Avenue"
     },
     "5": {
@@ -61,7 +61,7 @@
       "color_text": "BLUE",
       "size_id": "2904",
       "size_text": "Large",
-      "quantity": 0,
+      "quantity": 4,
       "display_brand": "Leg Avenue"
     }
   },

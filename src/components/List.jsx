@@ -4,11 +4,15 @@ import PropTypes from 'prop-types';
 const List = props => (
   <div>
     <h6>{props.title}</h6>
-    <ol>
-      {props.items.map(item => (
-        <li>{item.name}</li>
+    <ul>
+      {props.items.map((item) => (
+        <li key={item.prod_id + item.size}>
+          Product ID: {`${item.prod_id} `}
+          Size: {`${item.size} `}
+          Quantity: {`${item.quantity} `}
+        </li>
       ))}
-    </ol>
+    </ul>
   </div>
 );
 
