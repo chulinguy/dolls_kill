@@ -7,9 +7,9 @@ const List = props => (
     <ul>
       {props.items.map((item) => (
         <li key={item.prod_id + item.size}>
+          Quantity: {`${item.quantity} `}
           Product ID: {`${item.prod_id} `}
           Size: {`${item.size} `}
-          Quantity: {`${item.quantity} `}
         </li>
       ))}
     </ul>

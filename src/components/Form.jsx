@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FormGroup, FormControl, ControlLabel } from 'react-bootstrap';
 import { retrieveData, inputValidator, spaceTrimmer, rightAmountOfCommas } from '../util';
 import InputAlert from './InputAlert';
 import List from './List';
@@ -61,15 +62,25 @@ class Form extends Component {
     return (
       <div>
         <form onSubmit={this.submitHandler}>
-          <label htmlFor="product_id">
-            Product IDs:
-            <input type="text" value={this.state.prod_id} onChange={this.prodIdChangeHandler} />
-          </label>
-          {this.state.submitHover && this.state.disableSubmit && this.state.prod_id ? <InputAlert /> : null}
-          <SubmitButton
-            disableSubmit={this.state.disableSubmit}
-            submitHoverHandler={this.submitHoverHandler}
-          />
+          <FormGroup
+            controlId="formUserInput"
+          >
+            <ControlLabel htmlFor="product_id">
+              Product IDs:
+            </ControlLabel>
+            <FormControl
+              type="text"
+              value={this.state.prod_id}
+              placeholder="Enter Product IDs"
+              onChange={this.prodIdChangeHandler}
+            />
+
+            {this.state.submitHover && this.state.disableSubmit && this.state.prod_id ? <InputAlert /> : null}
+            <SubmitButton
+              disableSubmit={this.state.disableSubmit}
+              submitHoverHandler={this.submitHoverHandler}
+            />
+          </FormGroup>
         </form>
         <AscendButton
           ascendClickHandler={this.ascendClickHandler}

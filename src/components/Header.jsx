@@ -1,9 +1,17 @@
 import React from 'react';
+import { Panel } from 'react-bootstrap';
+
+const headerStyleObj = {
+  fontSize: '20px',
+};
 
 const Header = () => (
-  <header className="App-header">
-    <h1 className="App-title">Welcome to {"Chi's"} Form</h1>
-  </header>
+  <Panel className="App-header">
+    <Panel.Body
+      className="App-title"
+      style={headerStyleObj}
+    >Welcome to {"Chi's"} Dolls Kill form</Panel.Body>
+  </Panel>
 );
 
 export default Header;
