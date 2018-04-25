@@ -2,6 +2,7 @@
   "name": "dolls-kill",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://chulinguy.github.io/dolls_kill/",
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "3",
@@ -9,8 +10,7 @@
     "react": "^16.3.2",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4",
-    "webfontloader": "^1.6.28"
+    "react-scripts": "1.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
