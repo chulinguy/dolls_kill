@@ -7,13 +7,16 @@ const DescendButton = props => (
   <Button
     active={!props.ascendingOrder}
     onClick={props.descendClickHandler}
-  > Descending Order
+    className="pull-right"
+    style={props.fontSizeObj}
+  > Descending
   </Button>
 );
 
 DescendButton.propTypes = {
   descendClickHandler: PropTypes.func.isRequired,
   ascendingOrder: PropTypes.bool.isRequired,
+  fontSizeObj: PropTypes.objectOf(PropTypes.string).isRequired
 };
 
 export default DescendButton;

@@ -7,13 +7,15 @@ const AscendButton = props => (
   <Button
     active={props.ascendingOrder}
     onClick={props.ascendClickHandler}
-  > Ascending Order
+    style={props.fontSizeObj}
+  > Ascending
   </Button>
 );
 
 AscendButton.propTypes = {
   ascendClickHandler: PropTypes.func.isRequired,
   ascendingOrder: PropTypes.bool.isRequired,
+  fontSizeObj: PropTypes.objectOf(PropTypes.string).isRequired
 };
 
 export default AscendButton;

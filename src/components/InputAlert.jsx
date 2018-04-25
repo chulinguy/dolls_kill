@@ -9,8 +9,8 @@ const InputAlert = () => (
   <Popover
     id="popover-basic"
     placement="right"
-    positionLeft={70}
-    positionTop={110}
+    positionLeft={85}
+    positionTop={120}
     title="Inpute reminder"
   >
     Please make sure your input consists of only <strong>digits</strong> (0 - 9) and <strong>commas</strong>.

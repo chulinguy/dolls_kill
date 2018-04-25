@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FormGroup, FormControl, ControlLabel } from 'react-bootstrap';
+import { FormGroup, FormControl, ControlLabel, Grid, Row, Col } from 'react-bootstrap';
 import { retrieveData, inputValidator, spaceTrimmer, rightAmountOfCommas } from '../util';
 import InputAlert from './InputAlert';
 import List from './List';
@@ -25,10 +25,13 @@ class Form extends Component {
     this.descendClickHandler = this.descendClickHandler.bind(this);
     this.submitHoverHandler = this.submitHoverHandler.bind(this);
   }
+  // componentDidMount() {
+  //   console.log(document.documentElement.clientWidth);
+  // }
 
-  componentDidUpdate() {
-    console.log(this.state);
-  }
+  // componentDidUpdate() {
+  //   console.log(this.state);
+  // }
 
   prodIdChangeHandler(event) {
     this.setState({ prod_id: event.target.value });
@@ -59,46 +62,65 @@ class Form extends Component {
   }
 
   render() {
+    const inputStyleObj = { marginBottom: '10px' };
+    const fontSizeObj = document.documentElement.clientWidth > 375 ? { fontSize: '14px' } : { fontSize: '10px' };
+    const listStyleObj = document.documentElement.clientWidth > 375 ? { width: '50%' } : { width: '100%' };
+
     return (
-      <div>
+      <Grid fluid>
         <form onSubmit={this.submitHandler}>
-          <FormGroup
-            controlId="formUserInput"
-          >
-            <ControlLabel htmlFor="product_id">
+          <FormGroup controlId="formUserInput">
+            <ControlLabel>
               Product IDs:
             </ControlLabel>
             <FormControl
               type="text"
               value={this.state.prod_id}
-              placeholder="Enter Product IDs"
+              placeholder="Enter Product IDs, e.g. 143249, 142593 ..."
               onChange={this.prodIdChangeHandler}
+              style={inputStyleObj}
             />
-
             {this.state.submitHover && this.state.disableSubmit && this.state.prod_id ? <InputAlert /> : null}
-            <SubmitButton
-              disableSubmit={this.state.disableSubmit}
-              submitHoverHandler={this.submitHoverHandler}
-            />
+            <Row>
+              <Col xs={4}>
+                <SubmitButton
+                  disableSubmit={this.state.disableSubmit}
+                  submitHoverHandler={this.submitHoverHandler}
+                  fontSizeObj={fontSizeObj}
+                />
+              </Col>
+              <Col xs={4} className="text-center">
+                <AscendButton
+                  ascendClickHandler={this.ascendClickHandler}
+                  ascendingOrder={this.state.ascendingOrder}
+                  fontSizeObj={fontSizeObj}
+                />
+              </Col>
+              <Col xs={4}>
+                <DescendButton
+                  descendClickHandler={this.descendClickHandler}
+                  ascendingOrder={this.state.ascendingOrder}
+                  fontSizeObj={fontSizeObj}
+                />
+              </Col>
+            </Row>
           </FormGroup>
         </form>
-        <AscendButton
-          ascendClickHandler={this.ascendClickHandler}
-          ascendingOrder={this.state.ascendingOrder}
-        />
-        <DescendButton
-          descendClickHandler={this.descendClickHandler}
-          ascendingOrder={this.state.ascendingOrder}
-        />
-        <List
-          items={this.state.ascendingOrder ? this.state.availStocksAscend : this.state.availStocksDescend}
-          title="In-stock Items"
-        />
-        <List
-          items={this.state.emptyStocks}
-          title="Out-of-stock Items"
-        />
-      </div>
+        <Row>
+          <Col xs={6} style={listStyleObj}>
+            <List
+              items={this.state.ascendingOrder ? this.state.availStocksAscend : this.state.availStocksDescend}
+              title="In-stock Items"
+            />
+          </Col>
+          <Col xs={6} style={listStyleObj}>
+            <List
+              items={this.state.emptyStocks}
+              title="Out-of-stock Items"
+            />
+          </Col>
+        </Row>
+      </Grid>
     );
   }
 }

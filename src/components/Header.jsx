@@ -3,14 +3,25 @@ import { Panel } from 'react-bootstrap';
 
 const headerStyleObj = {
   fontSize: '20px',
+  backgroundColor: 'black',
+  color: 'white',
+};
+
+const rockSaltObj = {
+  fontFamily: 'Rock Salt',
+  color: 'red',
 };
 
 const Header = () => (
-  <Panel className="App-header">
+  <Panel
+    className="App-header"
+    style={headerStyleObj}
+  >
     <Panel.Body
       className="App-title"
-      style={headerStyleObj}
-    >Welcome to {"Chi's"} Dolls Kill form</Panel.Body>
+    >
+      Welcome to {"Chi's"} <span style={rockSaltObj}>Dolls Kill</span> Inventory Checker
+    </Panel.Body>
   </Panel>
 );
 
